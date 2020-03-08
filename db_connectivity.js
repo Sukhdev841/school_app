@@ -150,7 +150,7 @@ methods =
                 delete fields['limit']
                 delete fields['offset']
 
-                var query = "select * from students order by Name where ";
+                var query = "select * from students where ";
                 var keyNames = Object.keys(fields);
                 
                 var i = keyNames.length;
@@ -163,6 +163,7 @@ methods =
                         query += ' AND '
                     j++;
                 }
+                query += ' order by Name '
                 if( limit != null && offset != null)
                     query += ' limit ' + limit + ' offset ' + offset  ;
                 query += ' ;'
