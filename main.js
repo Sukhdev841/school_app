@@ -106,12 +106,12 @@ function profile_picture_exists(id,ext)
    image_path = path.resolve(__dirname, 'res/images/'+id+'.'+ext)
    try{
       if(fs.existsSync(image_path)){
-         console.log("Profile picture exists with name : " + id + "."+"ext")
+         console.log("Profile picture exists with name : " + id + "."+ext)
          return true
       }
       else
       {
-         console.log("Profile picture doesn't exists with name : " + id + "."+"ext")
+         console.log("Profile picture doesn't exists with name : " + id + "."+ext)
          return false
       }
    }
@@ -138,6 +138,14 @@ ipcMain.on('asynchronous-message', (event, arg) => {
       db_methods.api_all_students(arg.args,logger,function(rows)
       {
          // console.log(rows);      // for debug only
+         // check if image for student exists or not
+         for(i=0; i<rows.length; i++)
+         {
+            if(profile_picture_exists(rows[i]["id"],rows[i]["ext"]))
+               rows[i].profile_picture_exists=true;
+            else
+               rows[i].profile_picture_exists=false;
+         }
          event.sender.send('asynchronous-reply', {all_students_reply : true, data : rows})
       })
    }
@@ -246,6 +254,19 @@ ipcMain.on('asynchronous-message', (event, arg) => {
    }
    else if(arg.delete)
    {
+      // also delete corresponding profile pic if exists
+
+      db_methods.api_get_students(arg.object,logger,function(rows){
+         console.log("Searched before deleting : ")
+         console.log(rows)
+         if(profile_picture_exists(rows[0]["id"],rows[0]["ext"]))
+         {
+            console.log("Need to delete profile pic also.")
+            fs.unlink(path.join(__dirname,'res','images',rows[0]["id"]+'.'+rows[0]["ext"]))
+         }      
+         else
+            console.log("Profile pic doesn't exists.")
+      })
       db_methods.api_delete_student(arg.object,logger)
    }
 
