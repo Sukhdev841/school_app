@@ -1,0 +1,247 @@
+.body
+{
+    width: 100%;
+    border: 1px solid blue;
+    text-align: center;
+}
+
+.background
+{
+    /* background-color: rgb(105, 21, 21); */
+    border : solid black 1px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1%;
+    padding: 2%;
+}
+.unit
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 180px;
+    width: 800px;
+    padding: 1%;
+    margin: 0 auto 0;
+    text-align: left;
+    border: solid black 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    /* background-color: red; */
+}
+
+.unit:hover
+{
+    cursor: pointer;
+}
+
+.details
+{
+    /* background-color: red; */
+    float: left;
+    width: 70%;
+    height: 100%;
+}
+
+.pic
+{
+    /* background-color: green; */
+    float: right;
+    height: 100%;
+    width: auto;
+    width: 140px;
+    height: 190px;
+    border: solid black 1px;
+    /* padding: 2%; */
+}
+
+.clearing
+{
+    clear:both;
+}
+
+
+.field
+{
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.profile_img
+{
+    margin: 2%;
+    height: 96%;
+    width: 96%;
+    /* border: solid black 1px; */
+}
+
+.line
+{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width: 100%;
+    border-top: solid rgb(209, 190, 190) 1px;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.header
+{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+    margin:  0 auto;
+}
+
+.text
+{
+    text-align: center;
+    margin : 0 auto;
+    width: auto;
+    /* height: 100px; */
+    /* background-color: green; */
+    font-family: Arial, Helvetica, sans-serif;
+    /* color: rgb(80, 207, 80); */
+
+}
+
+a button
+{
+    float: right;
+    width: 100px;
+    height: 30px;
+    border: solid black 1px;
+    /* background-color: rgb(83, 255, 83); */
+}
+
+.search
+{
+    margin: 0 auto;
+    width: 98%;
+    border: solid black 1px;
+    padding : 5px;
+    /* background-color: rgb(247, 236, 236); */
+}
+
+.inline_field
+{
+    display: inline-block;
+    /* background-color: green; */
+    margin: 4px;
+    padding: 5px;
+    width: 200px;
+}
+
+.inline_field input
+{
+    margin-left: 1px;
+}
+
+.info
+{
+    padding: 3px;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 20px;
+    background-color: antiquewhite;
+    border: solid rgb(231, 217, 217) 1px;
+    margin-top: 10px;
+}
+
+.search_header
+{
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+}
+
+
+.pagination {
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    /* background-color: red; */
+    text-align: center;
+  }
+  
+.pagination button {
+    display: inline-block;
+color: black;
+/* float: left; */
+padding: 8px 16px;
+text-decoration: none;
+transition: background-color .3s;
+border: 1px solid #ddd;
+margin: 0 4px;
+}
+
+.pagination button.active {
+background-color: #4CAF50;
+color: white;
+border: 1px solid #4CAF50;
+}
+
+.pagination button:hover:not(.active) {background-color: #ddd;
+
+    cursor: pointer;
+}
+
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+
+  #query_count
+  {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 5px;
+      width: 99%;
+      background-color: rgb(228, 226, 226);
+      height: 30px;
+      padding-left: 8px;
+      padding-top: 4px;
+  }

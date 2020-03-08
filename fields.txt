@@ -1,0 +1,23 @@
+Name
+"Father Name"
+"Mother Name"
+"ਪਿਤਾ ਦਾ ਨਾਮ" 
+"ਮਾਤਾ ਦਾ ਨਾਮ"
+Gender
+"Date of Birth"
+"Date of Registration"
+Class
+"Adhaar Number"
+"Bank Account Number"
+"Bank Branch"
+"IFSC Code"
+"Fathers Occupation"
+"Income per Month"
+"Weight Registration"
+"Height Registration"
+"Physically Disable"
+"Have disablity certificate"
+"Caste"
+"Have caste certificate"
+"Marks_Grade in Last Class"
+"Comments"

@@ -1,0 +1,116 @@
+<html>
+  <head>
+      <meta charset="UTF-8">
+    <title>All Students</title>
+    <link rel="stylesheet" href="style/search.css"/>
+    <script src="scripts/search.js"></script> 
+  </head>
+  <body>
+      <div id="snackbar">Some text some message..</div>
+    <div class="header">
+      <h1 class="text">STUDENT DATA</h1>
+    </div>
+    <div class="search">
+      <div class="search_header">Search Parameters</div>
+      <div id="form">
+        <div class="inline_field">
+          <label>Name : </label>
+          <input type="text" name="Name" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Father's Name : </label>
+          <input type="text" name="Father Name" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Mother's Name : </label>
+          <input type="text" name="Mother Name" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Gender / ਲਿੰਗ : </label>
+          <select name="Gender">
+            <option value=""></option>
+            <option value="Male/ ਪੁਰਸ਼">Male/ ਪੁਰਸ਼</option>
+            <option value="Female/ ਔਰਤ">Female/ ਔਰਤ</option>
+            <option value="Other/ ਹੋਰ">Other/ ਹੋਰ</option>
+          </select>
+        </div>
+        <div class="inline_field">
+          <label>Date of Birth / ਜਨਮ ਮਿਤੀ : </label>
+          <input type="date" name="Date of Birth"/>
+        </div>
+        <div class="inline_field">
+          <label>Date of Registration / ਦਾਖ਼ਲ ਹੋਣ ਦੀ ਮਿਤੀ : </label>
+          <input type="date" name="Date of Registration"/>
+        </div>
+        <div class="inline_field">
+          <label>Class / ਜਮਾਤ :  </label>
+          <input type="text" name="Class"/>
+        </div>
+        <div class="inline_field">
+          <label>Adhaar No. / ਆਧਾਰ ਨੰ. : </label>
+          <input type="text" name="Adhaar Number" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Bank Acc. No. / ਬੈਂਕ ਅਕਾਊਂਟ ਨੰ. : </label>
+          <input type="text" name="Bank Account Number" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Bank Branch / ਬੈਂਕ ਬ੍ਰਾਂਚ : </label>
+          <input type="text" name="Bank Branch" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Father's Occupation / ਪਿਤਾ ਦਾ ਕਿੱਤਾ : </label>
+          <input type="text" name="Fathers Occupation" value=""/>
+        </div>
+        <div class="inline_field">
+          <label>Is Physically Disable? / ਕੀ  ਦਿਵਿਆਂਗ ਹੈ? </label>
+          <select name="Physically Disable">
+            <option value=""></option>
+            <option value="Yes/ ਹਾਂ">Yes/ ਹਾਂ</option>
+            <option value="No/ ਨਹੀਂ">No/ ਨਹੀਂ</option>
+          </select>
+        </div>
+        <div class="inline_field">
+          <label>Caste / ਜਾਤੀ : </label>
+          <select name="Caste">
+            <option value=""></option>
+            <option value="General">General</option>
+            <option value="BC">BC</option>
+            <option value="SC">SC</option>
+          </select>
+        </div>
+        <div class="inline_field">
+          <label>Marks or Grade Obtained in Last Class/ ਪਿਛਲੀ ਜਮਾਤ ਵਿਚ ਪ੍ਰਾਪਤ ਅੰਕ ਜਾਂ ਗ੍ਰੇਡ : </label>
+          <input type="text" name="Marks_Grade in Last Class" value=""/>
+        </div>
+        <button onclick="search()">Search</button>
+      </div>
+    </div>
+    <div id="query_count"></div>
+    <div id="background">
+    <!-- <div class="unit">
+        <div class="details">
+            <div class="clearing">
+                <div class="field"></div>
+                <div class="line"></div>
+                <div class="field">Class / ਜਮਾਤ : </div>
+                <div class="line"></div>
+                <div class="field">Father's Name / ਪਿਤਾ ਦਾ ਨਾਮ : </div>
+                <div class="line"></div>
+                <div class="field">Gender / ਲਿੰਗ :</div>
+                <div class="line"></div>
+                <div class="field">Date of Birth / ਜਨਮ ਮਿਤੀ : </div>
+            </div>
+        </div>
+        <div class="pic"><img class="profile_img" src="./images/child.png"></div>
+    </div> -->
+    </div>
+    <!-- <div class="footer"> -->
+      <div class="pagination">
+        <button onclick="previous_page()" id="previous_page">&laquo;</button>
+        <button id="current_page">1</button>
+        <button onclick="next_page()" id="next_page">&raquo;</button>
+      </div>
+    <!-- </div> -->
+  </body>
+</html>

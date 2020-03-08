@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset = "UTF-8">
+    <title>Edit Record</title>
+    <link rel="stylesheet" href="./style/insert.css" />
+    <script src="./scripts/insert.js"></script>
+</head>
+
+<body>
+    <div id="insert_form">
+        <div class="main_body">
+            <div class="top_box">
+                <div class="name_box">
+                    <div class="unit"><label>Name</label><input type="text" name="Name" value="" /></div>
+                    <div class="unit"><label>ਨਾਮ</label><input type="text" name="ਨਾਮ" value="" /></div>
+                    <div class="line"></div>
+                    <div class="unit"><label>Father's Name</label><input type="text" name="Father Name" value="" /></div>
+                    <div class="unit"><label>ਪਿਤਾ ਦਾ ਨਾਮ</label><input type="text" name="ਪਿਤਾ ਦਾ ਨਾਮ" value="" /></div>
+                    <div class="line"></div>
+                    <div class="unit"><label>Mother's Name</label><input type="text" name="Mother Name" value="" /></div>
+                    <div class="unit"><label>ਮਾਤਾ ਦਾ ਨਾਮ</label><input type="text" name="ਮਾਤਾ ਦਾ ਨਾਮ" value="" /></div>
+                    <div class="line"></div>
+                    <div class="unit"><label>Gender / ਲਿੰਗ</label><select name="Gender"><option>Male/ ਪੁਰਸ਼</option><option>Female/ ਔਰਤ</option><option>Other/ ਹੋਰ</option></select></div>
+                </div>
+                <div class="pic_box">
+                    <div class="pic"><img id="profile_pic" alt="Image Not Provided"/></div>
+                    <button class="image_div is_a_button" onclick="select_image();">select image</button>
+                    <button class="image_div is_a_button" onclick="remove_image();">remove image</button>
+                </div>
+            </div>
+            <div class="bottom_box">
+                <div class="line"></div>
+                <div class="unit"><label>Date of Birth / ਜਨਮ ਮਿਤੀ </label><input type="date" name="Date of Birth" value="" /></div>
+                <div class="unit"><label>Date of Registration / ਦਾਖ਼ਲ ਹੋਣ ਦੀ ਮਿਤੀ </label><input type="date" name="Date of Registration" value="" /></div>
+                <div class="unit"><label>Class / ਜਮਾਤ </label><input type="text" name="Class" value="" /></div>
+                <div class="line"></div>
+                <div class="unit"><label>Adhaar No. / ਆਧਾਰ ਨੰ.</label><input type="text" name="Adhaar Number" value="" /></div>
+                <div class="line"></div>
+                <div class="unit"><label>Bank Acc. No. / ਬੈਂਕ ਅਕਾਊਂਟ ਨੰ.</label><input type="text" name="Bank Account Number" value="" /><br/></div>
+                <div class="unit"><label>Bank Branch / ਬੈਂਕ ਬ੍ਰਾਂਚ</label><input type="text" name="Bank Branch" value="" /></div>
+                <div class="unit"><label>IFSC Code / IFSC ਕੋਡ</label><input type="text" name="IFSC Code" value="" /></div>
+                <div class="line"></div>
+                <div class="unit"><label>Father's Occupation / ਪਿਤਾ ਦਾ ਕਿੱਤਾ</label><input type="text" name="Fathers Occupation" value="" /></div>
+                <div class="unit"><label>Income per Month / ਆਮਦਨ ਪ੍ਰਤੀ ਮਾਹ</label><input type="text" name="Income per Month" value="" /></div>
+                <div class="line"></div>
+                <div class="unit_"><label>Weight During Registration / ਦਾਖਲੇ ਵੇਲੇ ਭਾਰ</label><input type="text" name="Weight Registration" value="" /></div>
+                <div class="unit_"><label>Height During Registration / ਦਾਖਲੇ ਵੇਲੇ ਕੱਦ</label><input type="text" name="Height Registration" value="" /></div>
+                <div class="unit_"><label>Is Physically Disable? / ਕੀ  ਦਿਵਿਆਂਗ ਹੈ?</label><select name="Physically Disable" id="disability_div" onchange="disability_updated(this);"><option>Yes/ ਹਾਂ</option><option selected="selected">No/ ਨਹੀਂ</option></select></div>
+                <div class="unit_" id="disabilitiy_certificate" hidden="hidden"><label>Certificate Available? / ਸਰਟੀਫਿਕੇਟ ਹੈ?</label><select name="Have disablity certificate"><option selected="selected">No/ ਨਹੀਂ</option><option>Yes/ ਹਾਂ</option></select></div>
+                <div class="unit_"><label>Caste / ਜਾਤੀ</label><select name="Caste" id="caste_div" onchange="caste_updated(this);"><option selected="selected">General</option><option>BC</option><option>SC</option></select></div>
+                <div class="unit_" id="caste_certificate" hidden="hidden"><label>Caste Certificate Available? / ਜਾਤੀ ਸਰਟੀਫਿਕੇਟ ਹੈ?</label><select name="Have caste certificate"><option selected="selected">No/ ਨਹੀਂ</option><option>Yes/ ਹਾਂ</option></select></div>
+                <div class="line"></div>
+                <div class="unit__"><label>Marks or Grade Obtained in Last Class/ ਪਿਛਲੀ ਜਮਾਤ ਵਿਚ ਪ੍ਰਾਪਤ ਅੰਕ ਜਾਂ ਗ੍ਰੇਡ</label><input class="short_input" type="text" name="Marks_Grade in Last Class" value="" /></div>
+                <br>
+                
+                <div class="line"></div>
+                <lable>Comments/ ਵਿਸ਼ੇਸ਼ ਕਥਨ</lable><br/><textarea class="txt_area" name="Comments" rows="4" cols="50"></textarea></div>
+        </div>
+        <div onclick = "update_record()" class="submit_button is_a_button"><input type="submit" value="Update Record" /></div>
+        <div onclick = "delete_record()" class="submit_button is_a_button"><input type="submit" value="Delete Record" /></div>
+        <div onclick = "print_record()" class="submit_button is_a_button"><input type="submit" value="Print Record" /></div>
+    </div>
+</body>
+
+</html>

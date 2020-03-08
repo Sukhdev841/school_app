@@ -1,0 +1,170 @@
+
+.main_body
+{
+    margin: 0 auto;
+    padding: 1%;
+    width: 950px;
+    border : 1px rgb(107, 107, 107) solid;
+    /* background-color: rgb(219, 255, 121); */
+}
+
+.main_body_p
+{
+    margin: 0 auto;
+    padding: 1%;
+    width: 1200px;
+    border : 1px rgb(107, 107, 107) solid;
+    /* background-color: rgb(219, 255, 121); */
+}
+
+.top_box
+{
+    /* background-color: blue; */
+    height: 280px;
+    width:100%;
+}
+
+.name_box
+{
+    float: left;
+    width: 80%;
+    /* background-color: green; */
+    height: 200px;
+}
+
+.pic_box
+{
+    /* padding: 2px; */
+    margin-right: 2%;
+    float: right;
+    width: 12%;
+    /* background-color: yellow; */
+    height: 200px;
+    /* border: solid black 1px; */
+}
+
+.pic
+{
+    padding: 8px;
+    width: 100%;
+    height: 180px;
+    border: solid black 1px;
+}
+
+.image_div
+{
+    margin-top: 10px;
+    width: 120px;
+}
+
+#profile_pic
+{
+    border: solid black 1px;
+    width: inherit;
+    height: inherit;
+}
+
+.bottom_box
+{
+    width: 100%;
+    /* background-color: red; */
+}
+
+.unit
+{
+    display: inline-block;
+    padding-top: 1px;
+    margin-left: 8px;
+    /* background-color: blue; */
+    width: 600px;
+    /* border-bottom: solid black 1px; */
+    height: 30px;
+}
+
+.unit_
+{
+    padding-top: 1px;
+    margin-left: 8px;
+    /* background-color: blue; */
+    width: 800px;
+    /* border-bottom: solid black 1px; */
+    height: 30px;
+}
+
+.unit__
+{
+    padding-top: 1px;
+    margin-left: 8px;
+    /* background-color: blue; */
+    width: 100%;
+    /* border-bottom: solid black 1px; */
+    height: 30px;
+    /* background-color: red; */
+}
+
+label
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 3px;
+    margin-left: 0px;
+}
+
+input[type='text'], input[type='date'], select
+{
+    margin-top: 1px;
+    margin-right: 2px;
+    outline: none;
+    float: right;
+    padding: .5%;
+    padding-left: 2%;
+    width: 50%;
+    /* border: none; */
+}
+
+.data
+{
+    margin-top: 1px;
+    margin-right: 2px;
+    outline: none;
+    float: right;
+    padding: .5%;
+    padding-left: 2%;
+    width: 40%;
+}
+
+input[type='text']:hover
+{
+    border: solid black 1px;
+}
+
+.line
+{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    width: 100%;
+    border-top: solid rgb(209, 190, 190) 1px;
+}
+
+.txt_area
+{
+    width: 100%;
+    height: 80px;
+}
+
+input[type='submit']
+{
+    margin: 2%;
+    margin-left: 42%;
+    width: 15%;
+    height: 5%;
+    color: white;
+    background-color: rgb(68, 187, 68);
+    border: solid rgb(129, 119, 119) 1px;
+    /* border: none; */
+    /* border-radius: 8px; */
+}
+
+input[type='submit']:hover
+{
+    background-color: rgb(26, 109, 26);
+}
