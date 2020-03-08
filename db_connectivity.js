@@ -86,7 +86,8 @@ methods =
             
             function()
             {
-                var select_all_query = "select * from students limit " + fields['limit'] + ' offset ' + fields['offset'] + ';';
+                //var select_all_query = "select * from students "+ ' order by Name;';
+                var select_all_query = "select * from students order by Name limit " + fields['limit'] + ' offset ' + fields['offset'] + ';';
                 db.all(select_all_query,function(err,rows)
                 {
                     //console.log(rows)
@@ -149,7 +150,7 @@ methods =
                 delete fields['limit']
                 delete fields['offset']
 
-                var query = "select * from students where ";
+                var query = "select * from students order by Name where ";
                 var keyNames = Object.keys(fields);
                 
                 var i = keyNames.length;

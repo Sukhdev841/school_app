@@ -101,6 +101,27 @@ function createWindow(url,max_size,callback) {
    callback(win)
 }  
 
+function profile_picture_exists(id,ext)
+{
+   image_path = path.resolve(__dirname, 'res/images/'+id+'.'+ext)
+   try{
+      if(fs.existsSync(image_path)){
+         console.log("Profile picture exists with name : " + id + "."+"ext")
+         return true
+      }
+      else
+      {
+         console.log("Profile picture doesn't exists with name : " + id + "."+"ext")
+         return false
+      }
+   }
+   catch(err){
+      console.log(err)
+      return false
+   }
+   return false
+}
+
 ipcMain.on('asynchronous-message', (event, arg) => {
    console.log(arg);
    show_menu_bar();
@@ -116,7 +137,7 @@ ipcMain.on('asynchronous-message', (event, arg) => {
    {
       db_methods.api_all_students(arg.args,logger,function(rows)
       {
-         console.log(rows);
+         // console.log(rows);      // for debug only
          event.sender.send('asynchronous-reply', {all_students_reply : true, data : rows})
       })
    }
@@ -131,6 +152,15 @@ ipcMain.on('asynchronous-message', (event, arg) => {
    {
       db_methods.api_get_students(arg.args,logger,function(rows)
       {
+         
+         // check if image for student exists or not
+         for(i=0; i<rows.length; i++)
+         {
+            if(profile_picture_exists(rows[i]["id"],rows[i]["ext"]))
+               rows[i].profile_picture_exists=true;
+            else
+               rows[i].profile_picture_exists=false;
+         }
          console.log(rows);
          event.sender.send('asynchronous-reply', {search_student_reply : true, data : rows})
       }) 
@@ -164,7 +194,7 @@ ipcMain.on('asynchronous-message', (event, arg) => {
    }
    else if(arg.change_page)
    {
-      console.log('request to change path')
+      console.log('request to change path or page')
       url_loader(primary_window,arg.url)
    }
    else if(arg.insert)

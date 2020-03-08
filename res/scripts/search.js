@@ -27,7 +27,22 @@ function add_card(obj)
     html += "<div class=\"field\">Date of Birth / ਜਨਮ ਮਿਤੀ : "+ obj["Date of Birth"] +"</div><div class=\"line\"></div>"
 
     html += "</div></div>"
-    var p = path.join('images',obj["id"]+'.' + obj["ext"]);
+    var p;
+    if(obj["profile_picture_exists"])
+    {
+        p = path.join('images',obj["id"]+'.' + obj["ext"]);
+    }
+    else
+    {
+        if(obj['Gender'] == 'Male/ ਪੁਰਸ਼')
+        {
+            p = path.join('images','default_boy.png');
+        }
+        else if(obj['Gender'] == 'Female/ ਔਰਤ')
+        {
+            p = path.join('images','default_girl.png');
+        }
+    }
     html += "<div class=\"pic\"><img class=\"profile_img\" alt='No Image' src=\""+p+"\"/></div>" 
     html += "</div>"
     $("#background").append(html);
