@@ -4,7 +4,7 @@ window.$ = window.jQuery = require('jquery')
 
 var total_count = 0;
 var offset = 0;
-var limit = 2;
+var limit = 15;
 var search_fields = {};
 var current_page = 0;
 
